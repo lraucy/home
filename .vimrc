@@ -107,19 +107,8 @@ set encoding=utf-8 " show unicode glyphs
 let g:syntastic_javascript_checkers=['jshint']
 let g:syntastic_python_checkers=['pylint', 'pyflakes']
 " Disable some pylint checks
-" C0111 Missing docstring
-" I0011 Warning locally suppressed using disable-msg
-" I0012 Warning locally suppressed using disable-msg
-" W0704 Except doesn't do anything Used when an except clause does nothing
-" but pass and there is no else clause
-" W0142 Used * or * magic* Used when a function or method is called using
-" *args or **kwargs to dispatch arguments.
-" W0212 Access to a protected member %s of a client class
-" W0232 Class has no __init__ method Used when a class has no __init__
-" method, neither its parent classes.
-" W0613 Unused argument %r Used when a function or method argument is not
-" used.
-" W0702 No exception's type specified Used when an except clause doesn't
-" specify exceptions type to catch.
-" R0201 Method could be a function
-let g:syntastic_python_pylint_args="-f parseable -r n -i y --disable=C0111,I0011,I0012,W0704,W0142,W0212,W0232,W0613,W0702,R0201"
+" Configure pylint check
+" See
+" https://github.com/kmmbvnr/django-jenkins/blob/master/django_jenkins/tasks/pylint.rc
+" for details.
+let g:syntastic_python_pylint_args="-f parseable -r n -i y --rcfile=~/.pylint.rc"

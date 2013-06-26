@@ -52,7 +52,7 @@ export EDITOR="vim"
 setopt NO_BEEP
 unsetopt share_history
 
-LOCAL_ZSH_CONFIG_FILE=.zshrc.local && test -f $LOCAL_ZSH_CONFIG_FILE && source $LOCAL_ZSH_CONFIG_FILE
+LOCAL_ZSH_CONFIG_FILE=~/.zshrc.local && test -f $LOCAL_ZSH_CONFIG_FILE && source $LOCAL_ZSH_CONFIG_FILE
 
 # Tmux with right colors.
 alias tmux="tmux -2"

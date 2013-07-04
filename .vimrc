@@ -114,4 +114,7 @@ let g:syntastic_python_checkers=['pylint', 'pyflakes', 'pep8']
 let g:syntastic_python_pylint_args="-f parseable -r n -i y --rcfile=~/.pylint.rc"
 
 " slime config
-let g:slime_target="tmux"
+let g:slime_target = "tmux"
+let b:slime_config = {"socket_name": "default", "target_pane": ":.+1"}
+let g:slime_paste_file="~/.tmux_slime_paste_file"
+let g:slime_python_ipython=1

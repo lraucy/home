@@ -105,7 +105,7 @@ set encoding=utf-8 " show unicode glyphs
 " ----------------------------------------
 "let g:pyflakes_use_quickfix = 0  Pyflakes disabled in favor of syntastic
 let g:syntastic_javascript_checkers=['jshint']
-let g:syntastic_python_checkers=['pylint', 'pyflakes']
+let g:syntastic_python_checkers=['pylint', 'pyflakes', 'pep8']
 " Disable some pylint checks
 " Configure pylint check
 " See

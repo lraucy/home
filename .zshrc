@@ -58,10 +58,10 @@ LOCAL_ZSH_CONFIG_FILE=~/.zshrc.local && test -f $LOCAL_ZSH_CONFIG_FILE && source
 alias tmux="tmux -2"
 [ -n "$TMUX" ] && export TERM=screen-256color
 
-clean_branch(){
+cleanbranch(){
     if [ $# -ne 2 ]
     then
-        echo "Usage: clean_branch branch_to_delete base_branch"
+        echo "Usage: cleanbranch branch_to_delete base_branch"
         return;
     fi
     local branch_to_delete=$1
@@ -82,4 +82,13 @@ clean_branch(){
     else
         echo "Not merged in $base_branch"
     fi
+}
+
+cleanmbranch() {
+    if [ $# -ne 1 ]
+    then
+        echo "Usage: cleanmbranch branch_to_delete"
+        return;
+    fi
+    cleanbranch $1 "master"
 }

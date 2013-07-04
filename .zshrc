@@ -57,3 +57,29 @@ LOCAL_ZSH_CONFIG_FILE=~/.zshrc.local && test -f $LOCAL_ZSH_CONFIG_FILE && source
 # Tmux with right colors.
 alias tmux="tmux -2"
 [ -n "$TMUX" ] && export TERM=screen-256color
+
+clean_branch(){
+    if [ $# -ne 2 ]
+    then
+        echo "Usage: clean_branch branch_to_delete base_branch"
+        return;
+    fi
+    local branch_to_delete=$1
+    local base_branch=$2
+    branch_in_base=$(git branch --contains $branch_to_delete | grep -c "^* $base_branch$")
+    if [ $branch_in_base -gt 0 ]
+    then
+        while true; do
+            echo "Merged in $base_branch"
+            echo "Delete $branch_to_delete?"
+            read yn
+            case $yn in
+                [Yy]* ) git branch -D $branch_to_delete; break;;
+                [Nn]* ) break;;
+                * ) echo "Please answer yes or no.";;
+            esac
+        done
+    else
+        echo "Not merged in $base_branch"
+    fi
+}

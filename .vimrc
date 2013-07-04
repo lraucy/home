@@ -112,3 +112,6 @@ let g:syntastic_python_checkers=['pylint', 'pyflakes', 'pep8']
 " https://github.com/kmmbvnr/django-jenkins/blob/master/django_jenkins/tasks/pylint.rc
 " for details.
 let g:syntastic_python_pylint_args="-f parseable -r n -i y --rcfile=~/.pylint.rc"
+
+" slime config
+let g:slime_target="tmux"

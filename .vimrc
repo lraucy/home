@@ -100,6 +100,10 @@ command -nargs=1 PyGrep grep -RnI --include='*.py' --exclude-dir=.git --exclude=
 set nocompatible "disable vi compatibility
 set laststatus=2 " always show statusline
 set encoding=utf-8 " show unicode glyphs
+"
+" Airline
+" ----------------------------------------
+let g:airline_theme='light'
 
 " Syntax checking plugins & config
 " ----------------------------------------

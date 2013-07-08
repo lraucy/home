@@ -125,3 +125,6 @@ let g:slime_python_ipython=1
 
 " Unite.vim config
 nnoremap <C-p> :Unite file_rec/async<cr>
+nnoremap <space>/ :Unite grep:.<cr>
+let g:unite_source_history_yank_enable = 1
+nnoremap <space>y :Unite history/yank<cr>

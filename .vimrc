@@ -122,3 +122,6 @@ let g:slime_target = "tmux"
 let b:slime_config = {"socket_name": "default", "target_pane": ":.+1"}
 let g:slime_paste_file="~/.tmux_slime_paste_file"
 let g:slime_python_ipython=1
+
+" Unite.vim config
+nnoremap <C-p> :Unite file_rec/async<cr>

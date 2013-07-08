@@ -104,6 +104,11 @@ set encoding=utf-8 " show unicode glyphs
 " Airline
 " ----------------------------------------
 let g:airline_theme='light'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+let g:airline_linecolumn_prefix = '␤ '
+let g:airline_fugitive_prefix = '⎇ '
+let g:airline_paste_symbol = 'ρ'
 
 " Syntax checking plugins & config
 " ----------------------------------------

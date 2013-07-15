@@ -109,6 +109,14 @@ let g:airline_right_sep = '◀'
 let g:airline_linecolumn_prefix = '␤ '
 let g:airline_fugitive_prefix = '⎇ '
 let g:airline_paste_symbol = 'ρ'
+" Faster rendering when leaving escape mode
+set ttimeoutlen=50
+" Disable default mode indicator
+set noshowmode
+" Git integration
+let g:airline_enable_fugitive=1
+" syntastic integration
+let g:airline_enable_syntastic=1
 
 " Syntax checking plugins & config
 " ----------------------------------------

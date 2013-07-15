@@ -92,3 +92,10 @@ cleanmbranch() {
     fi
     cleanbranch $1 "master"
 }
+
+xargcleanmbranch() {
+    while read branch_name
+    do
+        cleanmbranch branch_name
+    done
+}

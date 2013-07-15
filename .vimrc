@@ -118,3 +118,10 @@ let g:slime_target = "tmux"
 let b:slime_config = {"socket_name": "default", "target_pane": ":.+1"}
 let g:slime_paste_file="~/.tmux_slime_paste_file"
 let g:slime_python_ipython=1
+
+" Unite.vim config
+nnoremap <C-p> :Unite -start-insert file_rec/async<cr>
+let g:unite_source_grep_default_opts = ' -Hn'
+nnoremap <space>/ :Unite grep:.<cr>
+let g:unite_source_history_yank_enable = 1
+nnoremap <space>y :Unite history/yank<cr>

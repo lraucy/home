@@ -100,6 +100,15 @@ command -nargs=1 PyGrep grep -RnI --include='*.py' --exclude-dir=.git --exclude=
 set nocompatible "disable vi compatibility
 set laststatus=2 " always show statusline
 set encoding=utf-8 " show unicode glyphs
+"
+" Airline
+" ----------------------------------------
+let g:airline_theme='light'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+let g:airline_linecolumn_prefix = '␤ '
+let g:airline_fugitive_prefix = '⎇ '
+let g:airline_paste_symbol = 'ρ'
 
 " Syntax checking plugins & config
 " ----------------------------------------
@@ -118,3 +127,9 @@ let g:slime_target = "tmux"
 let b:slime_config = {"socket_name": "default", "target_pane": ":.+1"}
 let g:slime_paste_file="~/.tmux_slime_paste_file"
 let g:slime_python_ipython=1
+
+" Unite.vim config
+nnoremap <C-p> :Unite file_rec/async<cr>
+nnoremap <space>/ :Unite grep:.<cr>
+let g:unite_source_history_yank_enable = 1
+nnoremap <space>y :Unite history/yank<cr>

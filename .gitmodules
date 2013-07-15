@@ -4,12 +4,18 @@
 [submodule ".vim/bundle/vim-pathogen"]
 	path = .vim/bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen
-[submodule ".vim/bundle/vim-powerline"]
-	path = .vim/bundle/vim-powerline
-	url = https://github.com/Lokaltog/vim-powerline
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
 [submodule ".vim/bundle/vim-slime"]
 	path = .vim/bundle/vim-slime
 	url = https://github.com/jpalardy/vim-slime.git
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline.git
+[submodule ".vim/bundle/unite"]
+	path = .vim/bundle/unite
+	url = https://github.com/Shougo/unite.vim.git
+[submodule ".vim/bundle/vimproc"]
+	path = .vim/bundle/vimproc
+	url = https://github.com/Shougo/vimproc.vim.git

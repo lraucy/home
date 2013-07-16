@@ -5,7 +5,7 @@ Install:
 ```
 cd ~
 git init
-git add remote origin https://github.com/lraucy/home.git  # Fork the repository and use yours instead
+git remote add origin https://github.com/lraucy/home.git  # Fork the repository and use yours instead
 git fetch
 git checkout master  # You might need to rename old config files because of conflict
 git submodule init

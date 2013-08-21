@@ -96,6 +96,6 @@ cleanmbranch() {
 xargcleanmbranch() {
     while read branch_name
     do
-        cleanmbranch branch_name
+        cleanmbranch $branch_name
     done
 }

@@ -22,10 +22,6 @@ colorscheme vitamins
 set incsearch
 set hlsearch
 
-" Fold config
-set foldmethod=indent
-set foldlevel=99
-
 " 4 spaces for indent and display tabs and trailing spaces
 set expandtab
 set tabstop=4

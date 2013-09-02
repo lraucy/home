@@ -58,6 +58,23 @@ LOCAL_ZSH_CONFIG_FILE=~/.zshrc.local && test -f $LOCAL_ZSH_CONFIG_FILE && source
 alias tmux="tmux -2"
 [ -n "$TMUX" ] && export TERM=screen-256color
 
+
+# Add vim opening of file while file_name:line_number
+# Example: vim ~/.zshrc:33
+vim_commands=(vi vim gvim)
+_run_vim_wrapper() {
+    local cmd
+    for arg in $@; do
+        cmd="$cmd \"${arg/:/\" \"+:}\""
+    done
+    eval $cmd
+}
+for cmd in $vim_commands; do
+    eval "function ${cmd}_wrapper () { _run_vim_wrapper $cmd \$@}"
+    alias $cmd=${cmd}_wrapper
+done
+
+
 cleanbranch(){
     if [ $# -ne 2 ]
     then

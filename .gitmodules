@@ -25,3 +25,6 @@
 [submodule ".vim/bundle/vim-ruby"]
 	path = .vim/bundle/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule ".vim/bundle/quicktask"]
+	path = .vim/bundle/quicktask
+	url = https://github.com/aaronbieber/quicktask.git

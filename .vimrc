@@ -48,7 +48,7 @@ imap <F4> <C-O>\tp
 set pastetoggle=<F4>
 map <F6> :set foldlevel=99<CR>
 map <F7> :set foldlevel=1<CR>
-map <F8> :cprev<CR>
+map <F8> :split ~/.vim/TODO<CR>
 map <F9> :tnext<CR>
 map <F12> :cn<CR>
 " Change window with control + direction

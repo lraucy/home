@@ -58,6 +58,8 @@ LOCAL_ZSH_CONFIG_FILE=~/.zshrc.local && test -f $LOCAL_ZSH_CONFIG_FILE && source
 alias tmux="tmux -2"
 [ -n "$TMUX" ] && export TERM=screen-256color
 
+alias git-log-by-date="git log --pretty=\"format:%at %C(yellow)commit %H%Creset\nAuthor: %an <%ae>\\nDate: %aD\\n\\n %s\\n\" | sort -r | cut -d\" \" -f2- | sed -e \"s/\\\\\\n/\\\\`echo -e '\\n\\r'`/g\" | tr -d '\\15\\32' | less -R"
+
 
 # Add vim opening of file while file_name:line_number
 # Example: vim ~/.zshrc:33

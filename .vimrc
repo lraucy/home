@@ -33,8 +33,11 @@ set list lcs=tab:>-,trail:.
 " Fold config
 " Don't change folds while inserting text, until leaving insert mode
 " Protect against this when switching between windows
-autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
-autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
+" autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
+" autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
+
+set foldlevelstart=99
+set foldlevel=99
 
 " -----------------------------------------
 " Bindings
@@ -89,9 +92,9 @@ autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
 " Additional commands
 " ----------------------------------------
 " Nice grep with .git & tags exclusion
-command -nargs=1 Grep grep -RnI --exclude-dir=.git --exclude=tags <args> .
+command -nargs=1 Grep grep -RnIo --exclude-dir=.git --exclude=tags <args> .
 " Nice grep with .git & tags exclusion, only for Python files
-command -nargs=1 PyGrep grep -RnI --include='*.py' --exclude-dir=.git --exclude=tags <args> .
+command -nargs=1 PyGrep grep -RnIo --include='*.py' --exclude-dir=.git --exclude=tags <args> .
 
 
 " Plugins settings
@@ -125,13 +128,13 @@ let g:airline_enable_syntastic=1
 " ----------------------------------------
 "let g:pyflakes_use_quickfix = 0  Pyflakes disabled in favor of syntastic
 let g:syntastic_javascript_checkers=['jshint']
-let g:syntastic_python_checkers=['pylint', 'pyflakes', 'pep8']
+let g:syntastic_python_checkers=['pylint']
 " Disable some pylint checks
 " Configure pylint check
 " See
 " https://github.com/kmmbvnr/django-jenkins/blob/master/django_jenkins/tasks/pylint.rc
 " for details.
-let g:syntastic_python_pylint_args="-f parseable -r n -i y --rcfile=~/.pylint.rc"
+let g:syntastic_python_pylint_args="-f parseable -r n --rcfile=~/.pylint.rc"
 
 " slime config
 let g:slime_target = "tmux"
@@ -145,3 +148,7 @@ let g:unite_source_grep_default_opts = ' -Hn'
 nnoremap <space>/ :Unite grep:.<cr>
 let g:unite_source_history_yank_enable = 1
 nnoremap <space>y :Unite history/yank<cr>
+
+" Pydoc config
+let g:pydoc_open_cmd = 'tabnew'
+let g:pydoc_highlight = 0

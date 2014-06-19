@@ -52,7 +52,7 @@ set pastetoggle=<F4>
 map <F6> :set foldlevel=99<CR>
 map <F7> :set foldlevel=1<CR>
 map <F8> :split ~/.vim/TODO<CR>
-map <F9> :tnext<CR>
+map <F9> :w \| SyntasticCheck<CR>
 map <F12> :cn<CR>
 " Change window with control + direction
 map <c-Down> <c-w>j
@@ -135,6 +135,7 @@ let g:syntastic_python_checkers=['pylint']
 " https://github.com/kmmbvnr/django-jenkins/blob/master/django_jenkins/tasks/pylint.rc
 " for details.
 let g:syntastic_python_pylint_args="-f parseable -r n --rcfile=~/.pylint.rc"
+let g:syntastic_mode_map={'mode': 'passive'}
 
 " slime config
 let g:slime_target = "tmux"

@@ -16,7 +16,10 @@ set number
 set wildmenu
 set mouse=a
 
-colorscheme vitamins
+"colorscheme vitamins
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 
 " Search config
 set incsearch

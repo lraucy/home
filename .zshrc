@@ -60,6 +60,9 @@ alias tmux="tmux -2"
 
 alias git-log-by-date="git log --pretty=\"format:%at %C(yellow)commit %H%Creset\nAuthor: %an <%ae>\\nDate: %aD\\n\\n %s\\n\" | sort -r | cut -d\" \" -f2- | sed -e \"s/\\\\\\n/\\\\`echo -e '\\n\\r'`/g\" | tr -d '\\15\\32' | less -R"
 
+alias du="du -sh"
+
+on dus () { du -sh $@ | sort -h }
 
 # Add vim opening of file while file_name:line_number
 # Example: vim ~/.zshrc:33

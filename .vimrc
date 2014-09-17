@@ -1,3 +1,6 @@
+set nocompatible
+set t_Co=16
+"
 " -----------------------------------------
 " Pathogen init
 " -----------------------------------------
@@ -14,11 +17,9 @@ filetype plugin indent on
 
 set number
 set wildmenu
-set mouse=a
 
 "colorscheme vitamins
 set background=dark
-let g:solarized_termcolors=256
 colorscheme solarized
 
 " Search config

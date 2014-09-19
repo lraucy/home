@@ -113,7 +113,7 @@ set encoding=utf-8 " show unicode glyphs
 "
 " Airline
 " ----------------------------------------
-let g:airline_theme='light'
+let g:airline_theme='solarized'
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '◀'
 let g:airline_linecolumn_prefix = '␤ '

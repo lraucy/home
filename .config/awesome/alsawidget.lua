@@ -1,3 +1,6 @@
+-- Alsamixer plugin
+-- Requirements:
+--   - Install vicious library
 local awful = require("awful")
 local naughty = require("naughty")
 local vicious = require("vicious")

@@ -21,5 +21,5 @@ local function get_updates(format, warg)
 end
 
 checkupgradewidget = wibox.widget.textbox()
-vicious.register(checkupgradewidget, get_updates, "pacman: $1 AUR: $2 ", 600)
+vicious.register(checkupgradewidget, get_updates, "pacman: $1 AUR: $2 ", 60)
 return checkupgradewidget
